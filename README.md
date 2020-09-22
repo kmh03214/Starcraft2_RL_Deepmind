@@ -1,3 +1,6 @@
+<iframe width="640" height="360" src="https://www.youtube.com/embed/kTcRRaXV-fg?ecver=1"  
+ frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 # 1주차
 - 환경설정 방법
     - 환경설정은 PySC2 StarCraft II Learning Environment Setup.md 을 참고바랍니다.
@@ -123,4 +126,7 @@ actions 추가할때마다
     !unzip -P iagreetotheeula -oq SC2.4.10.zip -d ~
 
 # Train Graph
+
+게임 난이도 Hard 버젼 승률그래프  
+
 <img src = "./img/train_graph.png"> </img>
