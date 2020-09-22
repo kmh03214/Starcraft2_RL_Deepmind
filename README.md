@@ -1,6 +1,6 @@
 # 1주차
 - 환경설정 방법
-    - 환경설정은 PySC2 StarCraft II Learning Environment Setup.md 을 참고바랍니다.
+    - 환경설정은 <a href ='./PySC2 StarCraft II Learning Environment Setup.md'>PySC2 StarCraft II Learning Environment Setup.md</a> 을 참고바랍니다.
 
 # 2주차
 # [구현내용 설명]
