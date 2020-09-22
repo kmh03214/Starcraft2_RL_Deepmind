@@ -1,0 +1,55 @@
+# Final Project
+# [구현해야 할 것]
+
+## 주의사항
+---
+
+actions 추가할때마다
+모델 action space dim 1증가
+
+---
+
+1. Refinery base_top_left 일때 / 아닐때 (4 by 4) (OK)
+
+2. CommandCenter(앞마당) (OK)
+
+3. Train_SCV (OK)
+    - scv수 제한
+
+4. 자원 채집 문제 (OK)
+    - 최적 자원(gas, minerals) worker assigned
+
+4. Build_Supply_randomly / Build_Barracks_randomly ( OK )
+    - 서플라이 디팟 건설 조건 추가
+    - 배럭 건설갯수 제한
+
+5. Attack point 변경 (OK)
+
+6. Attack_ALL
+    - Attack All 할 때 함수에, 생산유닛 추가될 때마다 추가 (OK)
+    - 20이상일 때 공격
+
+7. build_Factory(OK)
+    - 건설위치 특정 지역에서 random 제한
+    - train tank
+
+8. build Starport (OK)
+    - 건설위치 특정 지역에서 random 제한
+    - train banshee
+
+9. 업그레이드 추가
+
+9. Reward Function 정의
+
+10. DQN 정의
+
+# 코랩 
+    - action 정의 함수에서 문제가 있음 ###############
+
+# 추가구현 해야할 것
+    - 본진 센터가 터졌을 경우 재건하기
+
+# Trouble Shooting
+    - Colab 환경에서 실행 시, Socket connection timed out 에러가 발생함
+    - 이 이슈는 action space를 정의할 때, raw_function.attack_pt( unit.tag, attack_point )에서,  
+    unit이 다수(2개 이상)가 될 경우에 생김# Starcraft2_RL_Deepmind

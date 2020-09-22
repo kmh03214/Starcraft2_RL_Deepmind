@@ -1,4 +1,9 @@
-# 구현내용 설명
+# 1주차
+- 환경설정 방법
+    - 환경설정은 PySC2 StarCraft II Learning Environment Setup.md 을 참고바랍니다.
+
+# 2주차
+# [구현내용 설명]
 
 [Github URL]
 - https://github.com/kmh03214/dmarl-sc2
@@ -51,12 +56,14 @@ actions 추가할때마다
 
 ---
 
-1. Refinery base_top_left 일때 / 아닐때 (4 by 4) (OK)
+1. Refinery 설치 및 Food_cap에 따른 Supplydepot 설치
+    - base_top_left 일때 / 아닐때 (4 by 4) (OK)
 
-2. CommandCenter(앞마당) (OK)
+2. CommandCenter 추가설치 하여 자원충당 (OK)
+    - 만약 초기 커맨드센터가 파괴되었을시 다시 그 자리에 설치
 
 3. Train_SCV (OK)
-    - scv수 제한
+    - scv수 자원에 맞춰 생산 최적구현
 
 4. 자원 채집 문제 (OK)
     - 최적 자원(gas, minerals) worker assigned
@@ -66,6 +73,8 @@ actions 추가할때마다
     - 배럭 건설갯수 제한
 
 5. Attack point 변경 (OK)
+    - Random Attack point 증가
+    - 상대방 Second multi Attack point 추가
 
 6. Attack_ALL
     - Attack All 할 때 함수에, 생산유닛 추가될 때마다 추가 (OK)
@@ -78,20 +87,40 @@ actions 추가할때마다
 8. build Starport (OK)
     - 건설위치 특정 지역에서 random 제한
     - train banshee
+    - train Raven ( Detection 기능을 위한 생산)
 
-9. 업그레이드 추가
+9. Tank Control (OK)
+    - Seige & UnSeiged 구현
+    - 탱크 부분 컨트롤 구현 ( tank subset choice)
+
+9. 업그레이드 추가 (Fail)
+    - 해당 함수 사용이 안됨
 
 9. Reward Function 정의
 
-10. DQN 정의
+10. DQN 정의 (Action Space 추가)
 
 # 코랩 
-    - action 정의 함수에서 문제가 있음 ###############
+    - action 정의 함수에서 문제가 있음
 
 # 추가구현 해야할 것
-    - 본진 센터가 터졌을 경우 재건하기
+    - 본진 센터가 터졌을 경우 재건하기 (OK)
+    - 업그레이드 문제 (Fail)
 
 # Trouble Shooting
     - Colab 환경에서 실행 시, Socket connection timed out 에러가 발생함
     - 이 이슈는 action space를 정의할 때, raw_function.attack_pt( unit.tag, attack_point )에서,  
     unit이 다수(2개 이상)가 될 경우에 생김# Starcraft2_RL_Deepmind
+
+    - 해결 방법 :  제공해 드린 Colab ‘Training StarCraft 2 Agent under Colab’ 에서 ‘Download StarCraft II’ 부분의 설치버전을 4.0.2 에서 최신 버전인 4.10 버전으로 바꾸어 줍니다.  
+
+    <AS-IS>
+    !wget http://blzdistsc2-a.akamaihd.net/Linux/SC2.4.0.2.zip
+    !unzip -P iagreetotheeula -oq SC2.4.0.2.zip -d ~
+
+    <TO-BE>
+    !wget http://blzdistsc2-a.akamaihd.net/Linux/SC2.4.10.zip
+    !unzip -P iagreetotheeula -oq SC2.4.10.zip -d ~
+
+# Train Graph
+<img src = "./img/train_graph.png"> </img>
